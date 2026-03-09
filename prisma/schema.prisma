@@ -1,0 +1,204 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum JobStatus {
+  OPEN
+  IN_PROGRESS
+  SUBMITTED
+  REVISION
+  COMPLETED
+  CANCELED
+
+  @@map("job_status")
+}
+
+enum ProposalStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  CANCELED
+
+  @@map("proposal_status")
+}
+
+model Job {
+  id          String          @id @default(cuid())
+  title       String
+  description String          @db.Text
+  style       String?
+  category    String?
+  budgetMin   Int?
+  budgetMax   Int?
+  deadline    DateTime?
+  contact     String
+  status      JobStatus       @default(OPEN)
+  clientId    String?
+  artistId    String?
+  createdAt   DateTime        @default(now())
+  
+  client      User?           @relation("ClientJobs", fields: [clientId], references: [id], map: "Job_clientId_fkey")
+  artist      User?           @relation("ArtistJobs", fields: [artistId], references: [id], map: "Job_artistId_fkey")
+  proposals   Proposal[]
+  attachments JobAttachment[]
+  conversations Conversation[]
+
+  @@index([artistId], map: "Job_artistId_fkey")
+  @@index([clientId], map: "Job_clientId_fkey")
+  @@map("job")
+}
+
+model JobAttachment {
+  id           String   @id @default(cuid())
+  jobId        String
+  path         String
+  filename     String
+  mimeType     String
+  size         Int
+  uploadedById String?
+  createdAt    DateTime @default(now())
+
+  job          Job      @relation(fields: [jobId], references: [id], onDelete: Cascade, map: "JobAttachment_jobId_fkey")
+  uploadedBy   User?    @relation(fields: [uploadedById], references: [id], map: "JobAttachment_uploadedById_fkey")
+
+  @@index([jobId], map: "JobAttachment_jobId_fkey")
+  @@index([uploadedById], map: "JobAttachment_uploadedById_fkey")
+  @@map("jobattachment")
+}
+
+model Proposal {
+  id            String         @id @default(cuid())
+  jobId         String
+  artistId      String
+  price         Int
+  message       String?        @db.Text
+  status        ProposalStatus @default(PENDING)
+  createdAt     DateTime       @default(now())
+
+  job           Job            @relation(fields: [jobId], references: [id], onDelete: Cascade, map: "Proposal_jobId_fkey")
+  artist        User           @relation("ArtistProposals", fields: [artistId], references: [id], map: "Proposal_artistId_fkey")
+  conversations Conversation[]
+
+  @@unique([jobId, artistId], map: "Proposal_jobId_artistId_key")
+  @@index([artistId], map: "Proposal_artistId_fkey")
+  @@map("proposal")
+}
+
+model Conversation {
+  id            String   @id @default(cuid())
+  jobId         String?
+  proposalId    String?
+  clientId      String
+  artistId      String
+  lastMessageAt DateTime @default(now())
+  createdAt     DateTime @default(now())
+
+  job           Job?      @relation(fields: [jobId], references: [id], onDelete: SetNull, map: "Conversation_jobId_fkey")
+  proposal      Proposal? @relation(fields: [proposalId], references: [id], onDelete: SetNull, map: "Conversation_proposalId_fkey")
+  client        User      @relation("ClientConversations", fields: [clientId], references: [id], map: "Conversation_clientId_fkey")
+  artist        User      @relation("ArtistConversations", fields: [artistId], references: [id], map: "Conversation_artistId_fkey")
+  messages      Message[]
+  participants  ConversationParticipant[]
+
+  @@index([artistId], map: "Conversation_artistId_fkey")
+  @@index([clientId], map: "Conversation_clientId_fkey")
+  @@index([jobId], map: "Conversation_jobId_fkey")
+  @@index([lastMessageAt], map: "Conversation_lastMessageAt_idx")
+  @@index([proposalId], map: "Conversation_proposalId_fkey")
+  @@map("conversation")
+}
+
+model Message {
+  id             String       @id @default(cuid())
+  conversationId String
+  senderId       String
+  body           String       @db.Text
+  readAt         DateTime?
+  createdAt      DateTime     @default(now())
+
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade, map: "Message_conversationId_fkey")
+  sender         User         @relation("SentMessages", fields: [senderId], references: [id], map: "Message_senderId_fkey")
+  attachments    MessageAttachment[]
+
+  @@index([conversationId, createdAt], map: "Message_conversationId_createdAt_idx")
+  @@index([senderId], map: "Message_senderId_fkey")
+  @@map("message")
+}
+
+model MessageAttachment {
+  id        String   @id @default(cuid())
+  messageId String
+  path      String
+  filename  String
+  mimeType  String
+  size      Int
+  createdAt DateTime @default(now())
+
+  message   Message  @relation(fields: [messageId], references: [id], onDelete: Cascade, map: "MessageAttachment_messageId_fkey")
+
+  @@index([messageId], map: "MessageAttachment_messageId_fkey")
+  @@map("messageattachment")
+}
+
+model ConversationParticipant {
+  id             String       @id @default(cuid())
+  conversationId String
+  userId         String
+  createdAt      DateTime     @default(now())
+
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade, map: "ConversationParticipant_conversationId_fkey")
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade, map: "ConversationParticipant_userId_fkey")
+
+  @@unique([conversationId, userId], map: "ConversationParticipant_conversationId_userId_key")
+  @@index([userId], map: "ConversationParticipant_userId_idx")
+  @@map("conversationparticipant")
+}
+
+model User {
+  id          String   @id @default(cuid())
+  uid         Int?     @unique(map: "User_uid_key")
+  email       String   @unique(map: "User_email_key")
+  password    String
+  name        String?
+  firstName   String?
+  lastName    String?
+  phone       String?
+  address     String?  @db.Text
+  avatarPath  String?
+  bannerPath  String?
+  socialLinks String?  @db.LongText
+  createdAt   DateTime @default(now())
+
+  arts                   Art[]
+  clientJobs             Job[]                     @relation("ClientJobs")
+  artistJobs             Job[]                     @relation("ArtistJobs")
+  proposals              Proposal[]                @relation("ArtistProposals")
+  uploadedAttachments    JobAttachment[]
+  clientConversations    Conversation[]            @relation("ClientConversations")
+  artistConversations    Conversation[]            @relation("ArtistConversations")
+  sentMessages           Message[]                 @relation("SentMessages")
+  participations         ConversationParticipant[]
+
+  @@map("user")
+}
+
+model Art {
+  id          String   @id @default(cuid())
+  title       String
+  description String?  @db.Text
+  price       Float?
+  image       String
+  contact     String?
+  artistId    String
+  createdAt   DateTime @default(now())
+
+  artist      User     @relation(fields: [artistId], references: [id], onDelete: Cascade, map: "Art_artistId_fkey")
+
+  @@index([artistId, createdAt], map: "Art_artistId_createdAt_idx")
+  @@map("art")
+}

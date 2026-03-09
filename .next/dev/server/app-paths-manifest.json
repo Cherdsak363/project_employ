@@ -1,0 +1,17 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/arts/route": "app/api/arts/route.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/api/conversations/[id]/messages/route": "app/api/conversations/[id]/messages/route.js",
+  "/api/conversations/route": "app/api/conversations/route.js",
+  "/api/jobs/route": "app/api/jobs/route.js",
+  "/api/profile/route": "app/api/profile/route.js",
+  "/api/register/route": "app/api/register/route.js",
+  "/api/upload-avatar/route": "app/api/upload-avatar/route.js",
+  "/api/upload-banner/route": "app/api/upload-banner/route.js",
+  "/edit-profile/page": "app/edit-profile/page.js",
+  "/hire/page": "app/hire/page.js",
+  "/messages/page": "app/messages/page.js",
+  "/page": "app/page.js",
+  "/signin/page": "app/signin/page.js"
+}
