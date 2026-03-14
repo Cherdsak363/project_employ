@@ -158,9 +158,7 @@ const authOptions = {
                     return {
                         id: user.id,
                         email: user.email,
-                        name: user.name,
-                        avatarPath: user.avatarPath,
-                        image: user.avatarPath
+                        name: user.name
                     };
                 }
                 return null;
@@ -171,37 +169,23 @@ const authOptions = {
         strategy: 'jwt'
     },
     callbacks: {
-        async jwt ({ token, user, trigger, session }) {
+        async jwt ({ token, user }) {
             if (user) {
                 token.id = user.id;
                 token.name = user.name;
                 token.email = user.email;
-                token.avatarPath = user.avatarPath;
-                token.picture = user.avatarPath;
-            }
-            if (trigger === 'update' && session?.user) {
-                if (session.user.name !== undefined) token.name = session.user.name;
-                if (session.user.avatarPath !== undefined) token.avatarPath = session.user.avatarPath;
-                if (session.user.avatarPath !== undefined) token.picture = session.user.avatarPath;
             }
             return token;
         },
         async session ({ session, token }) {
-            if (session?.user) {
-                const resolvedId = token?.id || token?.sub;
-                if (resolvedId) session.user.id = resolvedId;
+            if (session?.user && token?.id) {
+                session.user.id = token.id;
             }
             if (session?.user && token?.name !== undefined) {
                 session.user.name = token.name;
             }
             if (session?.user && token?.email) {
                 session.user.email = token.email;
-            }
-            if (session?.user && token?.avatarPath !== undefined) {
-                session.user.avatarPath = token.avatarPath;
-            }
-            if (session?.user && token?.picture !== undefined) {
-                session.user.image = token.picture;
             }
             return session;
         }
@@ -273,8 +257,29 @@ async function GET(request, context) {
         }
         const { searchParams } = new URL(request.url);
         const cursor = searchParams.get('cursor');
+        const checkSeen = searchParams.get('checkSeen') === 'true';
         const takeRaw = Number(searchParams.get('take') || 50);
         const take = Number.isFinite(takeRaw) ? Math.min(100, Math.max(1, Math.trunc(takeRaw))) : 50;
+        if (checkSeen) {
+            const messages = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].message.findMany({
+                where: {
+                    conversationId,
+                    senderId: userId,
+                    readAt: {
+                        not: null
+                    }
+                },
+                orderBy: {
+                    createdAt: 'desc'
+                },
+                take: 20,
+                select: {
+                    id: true,
+                    readAt: true
+                }
+            });
+            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json(messages);
+        }
         const where = {
             conversationId,
             ...cursor ? {
@@ -294,11 +299,32 @@ async function GET(request, context) {
                     select: {
                         id: true,
                         name: true,
+                        email: true,
                         avatarPath: true
                     }
                 },
-                attachments: true
+                attachments: true,
+                conversation: {
+                    include: {
+                        nicknames: {
+                            where: {
+                                userId
+                            }
+                        }
+                    }
+                }
             }
+        });
+        const mappedMessages = messages.map((m)=>{
+            const customNickname = m.conversation.nicknames.find((n)=>n.targetUserId === m.senderId)?.nickname;
+            return {
+                ...m,
+                sender: {
+                    ...m.sender,
+                    name: customNickname || m.sender.name || m.sender.email
+                },
+                conversation: undefined // Remove extra data
+            };
         });
         // Mark these messages as read if they are not from me
         const messageIdsToMark = messages.filter((m)=>m.senderId !== userId && !m.readAt).map((m)=>m.id);
@@ -314,7 +340,7 @@ async function GET(request, context) {
                 }
             });
         }
-        return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json(messages);
+        return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json(mappedMessages);
     } catch (error) {
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
             error: 'Failed to fetch messages'

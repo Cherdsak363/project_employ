@@ -31,8 +31,23 @@ export async function GET(request, context) {
 
     const { searchParams } = new URL(request.url)
     const cursor = searchParams.get('cursor')
+    const checkSeen = searchParams.get('checkSeen') === 'true'
     const takeRaw = Number(searchParams.get('take') || 50)
     const take = Number.isFinite(takeRaw) ? Math.min(100, Math.max(1, Math.trunc(takeRaw))) : 50
+
+    if (checkSeen) {
+      const messages = await prisma.message.findMany({
+        where: {
+          conversationId,
+          senderId: userId,
+          readAt: { not: null },
+        },
+        orderBy: { createdAt: 'desc' },
+        take: 20,
+        select: { id: true, readAt: true }
+      })
+      return NextResponse.json(messages)
+    }
 
     const where = {
       conversationId,
@@ -44,9 +59,28 @@ export async function GET(request, context) {
       orderBy: { createdAt: 'asc' },
       take,
       include: { 
-        sender: { select: { id: true, name: true, avatarPath: true } },
-        attachments: true
+        sender: { select: { id: true, name: true, email: true, avatarPath: true } },
+        attachments: true,
+        conversation: {
+          include: {
+            nicknames: {
+              where: { userId }
+            }
+          }
+        }
       },
+    })
+
+    const mappedMessages = messages.map(m => {
+      const customNickname = m.conversation.nicknames.find(n => n.targetUserId === m.senderId)?.nickname
+      return {
+        ...m,
+        sender: {
+          ...m.sender,
+          name: customNickname || m.sender.name || m.sender.email
+        },
+        conversation: undefined // Remove extra data
+      }
     })
 
     // Mark these messages as read if they are not from me
@@ -61,7 +95,7 @@ export async function GET(request, context) {
       })
     }
 
-    return NextResponse.json(messages)
+    return NextResponse.json(mappedMessages)
   } catch (error) {
     return NextResponse.json({ error: 'Failed to fetch messages' }, { status: 500 })
   }

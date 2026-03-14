@@ -198,6 +198,7 @@ export default function Nav() {
                       <ul>
                         <li><a href="/how-it-works">วิธีใช้งาน</a></li>
                         <li><a href="/support">Support</a></li>
+                        <li><a href={`/profile/${session?.user?.id}`}>ดูโปรไฟล์ของคุณ</a></li>
                         <li><a href="/edit-profile">แก้ไขโปรไฟล์</a></li>
                         <li><a href="/history">ประวัติจ้างงาน/ซื้อขาย</a></li>
                         <li>

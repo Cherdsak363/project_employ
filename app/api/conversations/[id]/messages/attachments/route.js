@@ -5,6 +5,7 @@ import { getServerSession } from 'next-auth'
 
 import prisma from '../../../../../../lib/db'
 import { authOptions } from '../../../../auth/[...nextauth]/route'
+import { scanFile } from '../../../../../../lib/virustotal'
 
 export async function POST(request, context) {
   try {
@@ -13,8 +14,8 @@ export async function POST(request, context) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const params = await context?.params
-    const conversationId = params?.id
+    const params = await (context?.params || {});
+    const conversationId = params?.id;
     if (!conversationId) {
       return NextResponse.json({ error: 'Missing conversation id' }, { status: 400 })
     }
@@ -49,6 +50,55 @@ export async function POST(request, context) {
 
     const maxSize = 10 * 1024 * 1024 // 10MB
 
+    for (const file of files) {
+      if (typeof file.size === 'number' && file.size > maxSize) {
+        return NextResponse.json({ 
+          error: `ไฟล์ "${file.name}" มีขนาดใหญ่เกินไป (จำกัด 10MB)` 
+        }, { status: 413 })
+      }
+    }
+
+    // Virus Scanning
+    const skipScan = data.get('confirmInfected') === 'true'
+    const scanResults = []
+
+    if (!skipScan) {
+      console.log(`[API] Starting virus scan for ${files.length} files...`);
+      for (const file of files) {
+        const bytes = await file.arrayBuffer()
+        const buffer = Buffer.from(bytes)
+        console.log(`[API] Scanning file: ${file.name}, size: ${buffer.length} bytes`);
+        const scanResult = await scanFile(buffer, file.name)
+        
+        console.log(`[API] Scan result for ${file.name}: infected=${scanResult.infected}, pos=${scanResult.pos}`);
+        if (scanResult.infected) {
+          scanResults.push({
+            filename: file.name,
+            pos: scanResult.pos,
+            total: scanResult.total,
+            link: scanResult.link
+          })
+        }
+      }
+
+      if (scanResults.length > 0) {
+        console.log(`[API] !!! INFECTED FILES DETECTED !!!: ${JSON.stringify(scanResults)}`);
+        // Force headers to ensure no caching and clear content type
+        return new Response(JSON.stringify({ 
+          error: 'พบไฟล์ที่มีความเสี่ยง',
+          code: 'INFECTED_FILES',
+          files: scanResults
+        }), { 
+          status: 400, 
+          headers: { 
+            'Content-Type': 'application/json',
+            'Cache-Control': 'no-store'
+          } 
+        })
+      }
+    }
+
+    console.log('[API] No threats detected or scan skipped. Proceeding with upload.');
     const created = []
     
     // We need a message to attach these to. 
@@ -83,10 +133,6 @@ export async function POST(request, context) {
     }
 
     for (const file of files) {
-      if (typeof file.size === 'number' && file.size > maxSize) {
-        continue // Skip large files
-      }
-
       const bytes = await file.arrayBuffer()
       const buffer = Buffer.from(bytes)
 

@@ -1,0 +1,65 @@
+#lab 1 สร้างโปรแกรมเดาเลย โดยมีเงื้อไข คือ
+#1.ตัวเลขจะต้องเกิดจากการสุ่ม ด้วยไลเบอรี่
+#2.ถ้าผู้ใช้เดาเลขผิด ระบบจะต้องใบ่ให้ว่า เลข นั้นสูงไป หรือ ต่ำไป
+#3.ให้ผู้ใช้ปอนจากคีบอร์
+#4.ผู้้เล่น มีโอกาสเดาได้แค่ 3 ครั้ง
+#5.ถ้าผู้เล่นเด่าถูก หรือเดาผิด ก็จะต้องมีข้อความบอกด้วยเสมอ ***ให้ใช้ Sting fromat ที่เรียนมา
+
+import random
+
+# 1. ตัวเลขจะต้องเกิดจากการสุ่ม ด้วยไลเบอรี่ (random number between 1 and 10 for example)
+answer = random.randint(1, 10)
+max_attempts = 3
+attempts_made = 0
+correct_guess = False
+print(f"สุ่มตัวเลขระหว่าง 1 ถึง 200000(ไม่จริง) คุณมีโอกาสเดาได้ {max_attempts} ครั้ง")
+
+while attempts_made < max_attempts:
+    try:
+        # 3. ให้ผู้ใช้ปอนจากคีบอร์ด
+        guess_input = input(f"เหลืออีก...... {max_attempts - attempts_made} ครั้ง. เดาตัวเลขใหม่: ")
+        user_guess = int(guess_input)
+        attempts_made += 1
+
+        if user_guess == answer:
+            # 5. ถ้าผู้เล่นเด่าถูก ก็จะต้องมีข้อความบอกด้วยเสมอ
+            print(f"คุณเดาถูกในครั้งที่ {attempts_made}. ตัวเลขคือ {answer}")
+            correct_guess = True
+            break
+        elif user_guess < answer:
+            print(f"เลข {user_guess} ต่ำไป. ลองเดาใหม่!")
+        else:
+            print(f"เลข {user_guess} สูงไป. ลองเดาใหม่!")
+
+    except ValueError:
+        print("กรุณาป้อนตัวเลขที่ถูกต้องเท่านั้น!")
+
+# 5. ถ้าผู้เล่นเดาผิด (หมดโอกาส) ก็จะต้องมีข้อความบอกด้วยเสมอ
+if not correct_guess:
+    print(f"คุณทายครบ {max_attempts}ครั้งแล้ว. ตัวเลขที่ถูกต้องคือ {answer}")
+
+
+while True:
+  try:
+    x = int(input("ป้อนตัวเลขแรก: "))
+    y = int(input("ป้อนตัวเลขที่สอง: "))
+
+    # Example operation (e.g., division) to trigger ZeroDivisionError
+    55result = x / y
+    print(f"ผลลัพธ์: {result}")
+
+  except ZeroDivisionError:
+    print("ห้ามใส่เลข 0 ในการหาร")
+
+  except ValueError:
+    print("กรุณาป้อนตัวเลขที่ถูกต้องเท่านั้น")
+
+  except Exception as e:
+    print(f"เกิดข้อผิดพลาดอื่น ๆ: {e}")
+
+
+
+file = open("/content/text.txt", 'r')
+
+#fike read
+file.read()

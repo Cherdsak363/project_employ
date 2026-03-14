@@ -170,9 +170,7 @@ const authOptions = {
                     return {
                         id: user.id,
                         email: user.email,
-                        name: user.name,
-                        avatarPath: user.avatarPath,
-                        image: user.avatarPath
+                        name: user.name
                     };
                 }
                 return null;
@@ -183,37 +181,23 @@ const authOptions = {
         strategy: 'jwt'
     },
     callbacks: {
-        async jwt ({ token, user, trigger, session }) {
+        async jwt ({ token, user }) {
             if (user) {
                 token.id = user.id;
                 token.name = user.name;
                 token.email = user.email;
-                token.avatarPath = user.avatarPath;
-                token.picture = user.avatarPath;
-            }
-            if (trigger === 'update' && session?.user) {
-                if (session.user.name !== undefined) token.name = session.user.name;
-                if (session.user.avatarPath !== undefined) token.avatarPath = session.user.avatarPath;
-                if (session.user.avatarPath !== undefined) token.picture = session.user.avatarPath;
             }
             return token;
         },
         async session ({ session, token }) {
-            if (session?.user) {
-                const resolvedId = token?.id || token?.sub;
-                if (resolvedId) session.user.id = resolvedId;
+            if (session?.user && token?.id) {
+                session.user.id = token.id;
             }
             if (session?.user && token?.name !== undefined) {
                 session.user.name = token.name;
             }
             if (session?.user && token?.email) {
                 session.user.email = token.email;
-            }
-            if (session?.user && token?.avatarPath !== undefined) {
-                session.user.avatarPath = token.avatarPath;
-            }
-            if (session?.user && token?.picture !== undefined) {
-                session.user.image = token.picture;
             }
             return session;
         }
@@ -297,6 +281,15 @@ async function POST(request, context) {
         } catch  {}
         const maxSize = 10 * 1024 * 1024 // 10MB
         ;
+        for (const file of files){
+            if (typeof file.size === 'number' && file.size > maxSize) {
+                return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
+                    error: `ไฟล์ "${file.name}" มีขนาดใหญ่เกินไป (จำกัด 10MB)`
+                }, {
+                    status: 413
+                });
+            }
+        }
         const created = [];
         // We need a message to attach these to. 
         // Usually, we upload files first, then create the message, or vice versa.
@@ -330,9 +323,6 @@ async function POST(request, context) {
             });
         }
         for (const file of files){
-            if (typeof file.size === 'number' && file.size > maxSize) {
-                continue; // Skip large files
-            }
             const bytes = await file.arrayBuffer();
             const buffer = Buffer.from(bytes);
             const ext = typeof file.name === 'string' && file.name.includes('.') ? file.name.split('.').pop() : 'bin';

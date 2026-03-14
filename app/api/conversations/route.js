@@ -25,6 +25,9 @@ export async function GET() {
             user: { select: { id: true, name: true, email: true, avatarPath: true } },
           },
         },
+        nicknames: {
+          where: { userId },
+        },
         messages: {
           orderBy: { createdAt: 'desc' },
           take: 1,
@@ -46,6 +49,7 @@ export async function GET() {
     const mapped = conversations.map((c) => {
       const other = c.participants.map((p) => p.user).find((u) => u.id !== userId)
       const last = c.messages[0]
+      const customNickname = c.nicknames.find(n => n.targetUserId === other?.id)?.nickname
 
       return {
         id: c.id,
@@ -55,7 +59,7 @@ export async function GET() {
         otherUser: other
           ? {
               id: other.id,
-              name: other.name,
+              name: customNickname || other.name,
               email: other.email,
               avatarPath: other.avatarPath,
             }
