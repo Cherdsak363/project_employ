@@ -3,9 +3,9 @@ import { join } from 'path'
 import { NextResponse } from 'next/server'
 import { getServerSession } from 'next-auth'
 
-import prisma from '../../../../../../lib/db'
-import { authOptions } from '../../../../auth/[...nextauth]/route'
-import { scanFile } from '../../../../../../lib/virustotal'
+import prisma from '@/lib/db'
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+import { scanFile } from '@/lib/virustotal'
 
 export async function POST(request, context) {
   try {

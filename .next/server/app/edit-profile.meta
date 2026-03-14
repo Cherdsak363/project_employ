@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/edit-profile/layout,_N_T_/edit-profile/page,_N_T_/edit-profile"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/edit-profile/__PAGE__",
+    "/edit-profile",
+    "/_index",
+    "/_head"
+  ]
+}

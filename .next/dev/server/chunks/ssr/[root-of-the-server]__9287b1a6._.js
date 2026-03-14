@@ -195,6 +195,26 @@ const resolvePath = (raw)=>{
     return raw.startsWith('/') ? raw : `/${raw}`;
 };
 function MessagesPage() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].Suspense, {
+        fallback: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            children: "Loading..."
+        }, void 0, false, {
+            fileName: "[project]/app/messages/page.js",
+            lineNumber: 46,
+            columnNumber: 31
+        }, void 0),
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(MessagesPageContent, {}, void 0, false, {
+            fileName: "[project]/app/messages/page.js",
+            lineNumber: 47,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/app/messages/page.js",
+        lineNumber: 46,
+        columnNumber: 5
+    }, this);
+}
+function MessagesPageContent() {
     const searchParams = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useSearchParams"])();
     const [conversations, setConversations] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     const [activeId, setActiveId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
@@ -910,7 +930,7 @@ function MessagesPage() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Toast$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/messages/page.js",
-                lineNumber: 999,
+                lineNumber: 1007,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -929,7 +949,7 @@ function MessagesPage() {
                                             children: "..."
                                         }, void 0, false, {
                                             fileName: "[project]/app/messages/page.js",
-                                            lineNumber: 1004,
+                                            lineNumber: 1012,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -937,7 +957,7 @@ function MessagesPage() {
                                             children: "QuickChat"
                                         }, void 0, false, {
                                             fileName: "[project]/app/messages/page.js",
-                                            lineNumber: 1005,
+                                            lineNumber: 1013,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -948,18 +968,18 @@ function MessagesPage() {
                                                 className: "bi bi-three-dots-vertical"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/messages/page.js",
-                                                lineNumber: 1007,
+                                                lineNumber: 1015,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/messages/page.js",
-                                            lineNumber: 1006,
+                                            lineNumber: 1014,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/messages/page.js",
-                                    lineNumber: 1003,
+                                    lineNumber: 1011,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -969,7 +989,7 @@ function MessagesPage() {
                                             className: "bi bi-search"
                                         }, void 0, false, {
                                             fileName: "[project]/app/messages/page.js",
-                                            lineNumber: 1012,
+                                            lineNumber: 1020,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -978,13 +998,13 @@ function MessagesPage() {
                                             onChange: ()=>{}
                                         }, void 0, false, {
                                             fileName: "[project]/app/messages/page.js",
-                                            lineNumber: 1013,
+                                            lineNumber: 1021,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/messages/page.js",
-                                    lineNumber: 1011,
+                                    lineNumber: 1019,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1007,7 +1027,7 @@ function MessagesPage() {
                                                                     className: "messages-avatar"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/messages/page.js",
-                                                                    lineNumber: 1026,
+                                                                    lineNumber: 1034,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 (c.isBlockedByMe || c.isBlockingMe) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1016,18 +1036,18 @@ function MessagesPage() {
                                                                         className: "bi bi-slash-circle"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/messages/page.js",
-                                                                        lineNumber: 1034,
+                                                                        lineNumber: 1042,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/messages/page.js",
-                                                                    lineNumber: 1033,
+                                                                    lineNumber: 1041,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/messages/page.js",
-                                                            lineNumber: 1025,
+                                                            lineNumber: 1033,
                                                             columnNumber: 21
                                                         }, this),
                                                         c.unreadCount > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1035,13 +1055,13 @@ function MessagesPage() {
                                                             children: c.unreadCount
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/messages/page.js",
-                                                            lineNumber: 1038,
+                                                            lineNumber: 1046,
                                                             columnNumber: 43
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/messages/page.js",
-                                                    lineNumber: 1024,
+                                                    lineNumber: 1032,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1051,29 +1071,29 @@ function MessagesPage() {
                                                         children: c.otherUser?.name || c.otherUser?.email || '-'
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/messages/page.js",
-                                                        lineNumber: 1041,
+                                                        lineNumber: 1049,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/messages/page.js",
-                                                    lineNumber: 1040,
+                                                    lineNumber: 1048,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, c.id, true, {
                                             fileName: "[project]/app/messages/page.js",
-                                            lineNumber: 1018,
+                                            lineNumber: 1026,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/app/messages/page.js",
-                                    lineNumber: 1016,
+                                    lineNumber: 1024,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/messages/page.js",
-                            lineNumber: 1002,
+                            lineNumber: 1010,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1092,7 +1112,7 @@ function MessagesPage() {
                                                     className: `messages-avatar ${activeConversation?.isBlockedByMe || activeConversation?.isBlockingMe ? 'blocked' : ''}`
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/messages/page.js",
-                                                    lineNumber: 1051,
+                                                    lineNumber: 1059,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1102,7 +1122,7 @@ function MessagesPage() {
                                                             children: activeConversation?.otherUser?.name || activeConversation?.otherUser?.email || '-'
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/messages/page.js",
-                                                            lineNumber: 1058,
+                                                            lineNumber: 1066,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1110,19 +1130,19 @@ function MessagesPage() {
                                                             children: " "
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/messages/page.js",
-                                                            lineNumber: 1059,
+                                                            lineNumber: 1067,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/messages/page.js",
-                                                    lineNumber: 1057,
+                                                    lineNumber: 1065,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/messages/page.js",
-                                            lineNumber: 1050,
+                                            lineNumber: 1058,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1138,12 +1158,12 @@ function MessagesPage() {
                                                             className: "bi bi-pencil-square"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/messages/page.js",
-                                                            lineNumber: 1067,
+                                                            lineNumber: 1075,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/messages/page.js",
-                                                        lineNumber: 1066,
+                                                        lineNumber: 1074,
                                                         columnNumber: 21
                                                     }, this),
                                                     !activeConversation.isBlockingMe && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1154,12 +1174,12 @@ function MessagesPage() {
                                                             className: `bi ${activeConversation.isBlockedByMe ? 'bi-check-circle' : 'bi-slash-circle'}`
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/messages/page.js",
-                                                            lineNumber: 1075,
+                                                            lineNumber: 1083,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/messages/page.js",
-                                                        lineNumber: 1070,
+                                                        lineNumber: 1078,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1170,12 +1190,12 @@ function MessagesPage() {
                                                             className: "bi bi-flag"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/messages/page.js",
-                                                            lineNumber: 1079,
+                                                            lineNumber: 1087,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/messages/page.js",
-                                                        lineNumber: 1078,
+                                                        lineNumber: 1086,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1186,12 +1206,12 @@ function MessagesPage() {
                                                             className: "bi bi-trash"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/messages/page.js",
-                                                            lineNumber: 1082,
+                                                            lineNumber: 1090,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/messages/page.js",
-                                                        lineNumber: 1081,
+                                                        lineNumber: 1089,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1202,29 +1222,29 @@ function MessagesPage() {
                                                             className: "bi bi-person-circle"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/messages/page.js",
-                                                            lineNumber: 1089,
+                                                            lineNumber: 1097,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/messages/page.js",
-                                                        lineNumber: 1084,
+                                                        lineNumber: 1092,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/messages/page.js",
-                                                lineNumber: 1065,
+                                                lineNumber: 1073,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/messages/page.js",
-                                            lineNumber: 1063,
+                                            lineNumber: 1071,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/messages/page.js",
-                                    lineNumber: 1049,
+                                    lineNumber: 1057,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1257,12 +1277,12 @@ function MessagesPage() {
                                                                                     className: "messages-attachment-img"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/messages/page.js",
-                                                                                    lineNumber: 1132,
+                                                                                    lineNumber: 1140,
                                                                                     columnNumber: 43
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/messages/page.js",
-                                                                                lineNumber: 1128,
+                                                                                lineNumber: 1136,
                                                                                 columnNumber: 41
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1276,18 +1296,18 @@ function MessagesPage() {
                                                                                     className: "bi bi-download"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/messages/page.js",
-                                                                                    lineNumber: 1142,
+                                                                                    lineNumber: 1150,
                                                                                     columnNumber: 43
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/messages/page.js",
-                                                                                lineNumber: 1134,
+                                                                                lineNumber: 1142,
                                                                                 columnNumber: 41
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/messages/page.js",
-                                                                        lineNumber: 1127,
+                                                                        lineNumber: 1135,
                                                                         columnNumber: 39
                                                                     }, this) : isVideo ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                         className: "messages-attachment-container discord-style video-type",
@@ -1300,7 +1320,7 @@ function MessagesPage() {
                                                                                 children: "Your browser does not support the video tag."
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/messages/page.js",
-                                                                                lineNumber: 1147,
+                                                                                lineNumber: 1155,
                                                                                 columnNumber: 41
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1314,18 +1334,18 @@ function MessagesPage() {
                                                                                     className: "bi bi-download"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/messages/page.js",
-                                                                                    lineNumber: 1163,
+                                                                                    lineNumber: 1171,
                                                                                     columnNumber: 43
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/messages/page.js",
-                                                                                lineNumber: 1155,
+                                                                                lineNumber: 1163,
                                                                                 columnNumber: 41
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/messages/page.js",
-                                                                        lineNumber: 1146,
+                                                                        lineNumber: 1154,
                                                                         columnNumber: 39
                                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                         className: "messages-attachment-container discord-style",
@@ -1340,18 +1360,18 @@ function MessagesPage() {
                                                                                             className: "bi bi-file-earmark-zip-fill"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/messages/page.js",
-                                                                                            lineNumber: 1174,
+                                                                                            lineNumber: 1182,
                                                                                             columnNumber: 47
                                                                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
                                                                                             className: "bi bi-file-earmark-text-fill"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/messages/page.js",
-                                                                                            lineNumber: 1176,
+                                                                                            lineNumber: 1184,
                                                                                             columnNumber: 47
                                                                                         }, this)
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/messages/page.js",
-                                                                                        lineNumber: 1172,
+                                                                                        lineNumber: 1180,
                                                                                         columnNumber: 43
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1362,7 +1382,7 @@ function MessagesPage() {
                                                                                                 children: att.filename || 'ไฟล์แนบ'
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/messages/page.js",
-                                                                                                lineNumber: 1180,
+                                                                                                lineNumber: 1188,
                                                                                                 columnNumber: 45
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1370,19 +1390,19 @@ function MessagesPage() {
                                                                                                 children: formatFileSize(att.size || 0)
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/app/messages/page.js",
-                                                                                                lineNumber: 1181,
+                                                                                                lineNumber: 1189,
                                                                                                 columnNumber: 45
                                                                                             }, this)
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/app/messages/page.js",
-                                                                                        lineNumber: 1179,
+                                                                                        lineNumber: 1187,
                                                                                         columnNumber: 43
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/messages/page.js",
-                                                                                lineNumber: 1168,
+                                                                                lineNumber: 1176,
                                                                                 columnNumber: 41
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1396,29 +1416,29 @@ function MessagesPage() {
                                                                                     className: "bi bi-download"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/messages/page.js",
-                                                                                    lineNumber: 1192,
+                                                                                    lineNumber: 1200,
                                                                                     columnNumber: 43
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/messages/page.js",
-                                                                                lineNumber: 1184,
+                                                                                lineNumber: 1192,
                                                                                 columnNumber: 41
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/messages/page.js",
-                                                                        lineNumber: 1167,
+                                                                        lineNumber: 1175,
                                                                         columnNumber: 39
                                                                     }, this)
                                                                 }, att.id, false, {
                                                                     fileName: "[project]/app/messages/page.js",
-                                                                    lineNumber: 1125,
+                                                                    lineNumber: 1133,
                                                                     columnNumber: 35
                                                                 }, this);
                                                             })
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/messages/page.js",
-                                                            lineNumber: 1110,
+                                                            lineNumber: 1118,
                                                             columnNumber: 29
                                                         }, this),
                                                         m.body && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1432,17 +1452,17 @@ function MessagesPage() {
                                                                     onClick: ()=>openImageModal(m.body)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/messages/page.js",
-                                                                    lineNumber: 1205,
+                                                                    lineNumber: 1213,
                                                                     columnNumber: 35
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/messages/page.js",
-                                                                lineNumber: 1204,
+                                                                lineNumber: 1212,
                                                                 columnNumber: 33
                                                             }, this) : m.body
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/messages/page.js",
-                                                            lineNumber: 1202,
+                                                            lineNumber: 1210,
                                                             columnNumber: 29
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1453,7 +1473,7 @@ function MessagesPage() {
                                                                     children: formatTime(m.createdAt)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/messages/page.js",
-                                                                    lineNumber: 1220,
+                                                                    lineNumber: 1228,
                                                                     columnNumber: 29
                                                                 }, this),
                                                                 fromMe && m.readAt && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1463,31 +1483,31 @@ function MessagesPage() {
                                                                             className: "bi bi-check2-all"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/messages/page.js",
-                                                                            lineNumber: 1226,
+                                                                            lineNumber: 1234,
                                                                             columnNumber: 33
                                                                         }, this),
                                                                         " อ่านแล้ว"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/messages/page.js",
-                                                                    lineNumber: 1224,
+                                                                    lineNumber: 1232,
                                                                     columnNumber: 31
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/messages/page.js",
-                                                            lineNumber: 1218,
+                                                            lineNumber: 1226,
                                                             columnNumber: 27
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/messages/page.js",
-                                                    lineNumber: 1108,
+                                                    lineNumber: 1116,
                                                     columnNumber: 25
                                                 }, this)
                                             }, m.id, false, {
                                                 fileName: "[project]/app/messages/page.js",
-                                                lineNumber: 1107,
+                                                lineNumber: 1115,
                                                 columnNumber: 23
                                             }, this);
                                         }),
@@ -1496,13 +1516,13 @@ function MessagesPage() {
                                             children: "ยังไม่มีข้อความ"
                                         }, void 0, false, {
                                             fileName: "[project]/app/messages/page.js",
-                                            lineNumber: 1244,
+                                            lineNumber: 1252,
                                             columnNumber: 60
                                         }, this) : null
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/messages/page.js",
-                                    lineNumber: 1096,
+                                    lineNumber: 1104,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1514,14 +1534,14 @@ function MessagesPage() {
                                                 className: "bi bi-exclamation-circle"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/messages/page.js",
-                                                lineNumber: 1253,
+                                                lineNumber: 1261,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: activeConversation.isBlockedByMe ? 'คุณได้บล็อกผู้ใช้นี้ไว้ ไม่สามารถส่งข้อความได้' : 'คุณไม่สามารถส่งข้อความถึงผู้ใช้นี้ได้'
                                             }, void 0, false, {
                                                 fileName: "[project]/app/messages/page.js",
-                                                lineNumber: 1254,
+                                                lineNumber: 1262,
                                                 columnNumber: 19
                                             }, this),
                                             activeConversation.isBlockedByMe && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1530,13 +1550,13 @@ function MessagesPage() {
                                                 children: "เลิกบล็อก"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/messages/page.js",
-                                                lineNumber: 1260,
+                                                lineNumber: 1268,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/messages/page.js",
-                                        lineNumber: 1252,
+                                        lineNumber: 1260,
                                         columnNumber: 17
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                                         children: [
@@ -1550,7 +1570,7 @@ function MessagesPage() {
                                                                 alt: ""
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/messages/page.js",
-                                                                lineNumber: 1270,
+                                                                lineNumber: 1278,
                                                                 columnNumber: 29
                                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "file-preview-icon",
@@ -1559,7 +1579,7 @@ function MessagesPage() {
                                                                         className: "bi bi-file-earmark-text"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/messages/page.js",
-                                                                        lineNumber: 1273,
+                                                                        lineNumber: 1281,
                                                                         columnNumber: 31
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1567,13 +1587,13 @@ function MessagesPage() {
                                                                         children: selectedFiles[idx]?.name
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/messages/page.js",
-                                                                        lineNumber: 1274,
+                                                                        lineNumber: 1282,
                                                                         columnNumber: 31
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/messages/page.js",
-                                                                lineNumber: 1272,
+                                                                lineNumber: 1280,
                                                                 columnNumber: 29
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1583,23 +1603,23 @@ function MessagesPage() {
                                                                     className: "bi bi-x"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/messages/page.js",
-                                                                    lineNumber: 1278,
+                                                                    lineNumber: 1286,
                                                                     columnNumber: 29
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/messages/page.js",
-                                                                lineNumber: 1277,
+                                                                lineNumber: 1285,
                                                                 columnNumber: 27
                                                             }, this)
                                                         ]
                                                     }, url, true, {
                                                         fileName: "[project]/app/messages/page.js",
-                                                        lineNumber: 1268,
+                                                        lineNumber: 1276,
                                                         columnNumber: 25
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/messages/page.js",
-                                                lineNumber: 1266,
+                                                lineNumber: 1274,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1615,7 +1635,7 @@ function MessagesPage() {
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/messages/page.js",
-                                                        lineNumber: 1285,
+                                                        lineNumber: 1293,
                                                         columnNumber: 21
                                                     }, this),
                                                     (uploading || isScanning) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1625,7 +1645,7 @@ function MessagesPage() {
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/messages/page.js",
-                                                        lineNumber: 1293,
+                                                        lineNumber: 1301,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1642,12 +1662,12 @@ function MessagesPage() {
                                                                     className: `bi ${uploading || isScanning ? 'bi-hourglass-split' : 'bi-plus-lg'}`
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/messages/page.js",
-                                                                    lineNumber: 1306,
+                                                                    lineNumber: 1314,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/messages/page.js",
-                                                                lineNumber: 1299,
+                                                                lineNumber: 1307,
                                                                 columnNumber: 23
                                                             }, this),
                                                             showPlusMenu && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1664,20 +1684,20 @@ function MessagesPage() {
                                                                                 className: "bi bi-file-earmark-arrow-up"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/messages/page.js",
-                                                                                lineNumber: 1312,
+                                                                                lineNumber: 1320,
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                 children: "อัปโหลดไฟล์"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/messages/page.js",
-                                                                                lineNumber: 1313,
+                                                                                lineNumber: 1321,
                                                                                 columnNumber: 29
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/messages/page.js",
-                                                                        lineNumber: 1311,
+                                                                        lineNumber: 1319,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1691,20 +1711,20 @@ function MessagesPage() {
                                                                                 className: "bi bi-emoji-smile"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/messages/page.js",
-                                                                                lineNumber: 1316,
+                                                                                lineNumber: 1324,
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                 children: "อิโมจิ"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/messages/page.js",
-                                                                                lineNumber: 1317,
+                                                                                lineNumber: 1325,
                                                                                 columnNumber: 29
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/messages/page.js",
-                                                                        lineNumber: 1315,
+                                                                        lineNumber: 1323,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1718,32 +1738,32 @@ function MessagesPage() {
                                                                                 className: "bi bi-filetype-gif"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/messages/page.js",
-                                                                                lineNumber: 1320,
+                                                                                lineNumber: 1328,
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                 children: "GIF"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/messages/page.js",
-                                                                                lineNumber: 1321,
+                                                                                lineNumber: 1329,
                                                                                 columnNumber: 29
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/messages/page.js",
-                                                                        lineNumber: 1319,
+                                                                        lineNumber: 1327,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/messages/page.js",
-                                                                lineNumber: 1310,
+                                                                lineNumber: 1318,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/messages/page.js",
-                                                        lineNumber: 1298,
+                                                        lineNumber: 1306,
                                                         columnNumber: 21
                                                     }, this),
                                                     showEmojiPicker && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1756,17 +1776,17 @@ function MessagesPage() {
                                                                 theme: "dark"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/messages/page.js",
-                                                                lineNumber: 1330,
+                                                                lineNumber: 1338,
                                                                 columnNumber: 27
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/messages/page.js",
-                                                            lineNumber: 1329,
+                                                            lineNumber: 1337,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/messages/page.js",
-                                                        lineNumber: 1328,
+                                                        lineNumber: 1336,
                                                         columnNumber: 23
                                                     }, this),
                                                     showGifPicker && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1782,7 +1802,7 @@ function MessagesPage() {
                                                                             children: "GIPHY"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/messages/page.js",
-                                                                            lineNumber: 1339,
+                                                                            lineNumber: 1347,
                                                                             columnNumber: 29
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1792,18 +1812,18 @@ function MessagesPage() {
                                                                                 className: "bi bi-x"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/messages/page.js",
-                                                                                lineNumber: 1341,
+                                                                                lineNumber: 1349,
                                                                                 columnNumber: 31
                                                                             }, this)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/messages/page.js",
-                                                                            lineNumber: 1340,
+                                                                            lineNumber: 1348,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/messages/page.js",
-                                                                    lineNumber: 1338,
+                                                                    lineNumber: 1346,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$giphy$2f$react$2d$components$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SearchContextManager"], {
@@ -1815,23 +1835,23 @@ function MessagesPage() {
                                                                         }
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/messages/page.js",
-                                                                        lineNumber: 1345,
+                                                                        lineNumber: 1353,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/messages/page.js",
-                                                                    lineNumber: 1344,
+                                                                    lineNumber: 1352,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/messages/page.js",
-                                                            lineNumber: 1337,
+                                                            lineNumber: 1345,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/messages/page.js",
-                                                        lineNumber: 1336,
+                                                        lineNumber: 1344,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -1858,7 +1878,7 @@ function MessagesPage() {
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/messages/page.js",
-                                                        lineNumber: 1353,
+                                                        lineNumber: 1361,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1871,31 +1891,31 @@ function MessagesPage() {
                                                             className: "bi bi-send-fill"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/messages/page.js",
-                                                            lineNumber: 1374,
+                                                            lineNumber: 1382,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/messages/page.js",
-                                                        lineNumber: 1373,
+                                                        lineNumber: 1381,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/messages/page.js",
-                                                lineNumber: 1284,
+                                                lineNumber: 1292,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true)
                                 }, void 0, false, {
                                     fileName: "[project]/app/messages/page.js",
-                                    lineNumber: 1250,
+                                    lineNumber: 1258,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/messages/page.js",
-                            lineNumber: 1048,
+                            lineNumber: 1056,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -1910,7 +1930,7 @@ function MessagesPage() {
                                         className: "messages-profile-avatar"
                                     }, void 0, false, {
                                         fileName: "[project]/app/messages/page.js",
-                                        lineNumber: 1387,
+                                        lineNumber: 1395,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1918,7 +1938,7 @@ function MessagesPage() {
                                         children: activeConversation?.otherUser?.name || activeConversation?.otherUser?.email || '-'
                                     }, void 0, false, {
                                         fileName: "[project]/app/messages/page.js",
-                                        lineNumber: 1393,
+                                        lineNumber: 1401,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1926,29 +1946,29 @@ function MessagesPage() {
                                         children: "Hi there, I am using chat app"
                                     }, void 0, false, {
                                         fileName: "[project]/app/messages/page.js",
-                                        lineNumber: 1394,
+                                        lineNumber: 1402,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/messages/page.js",
-                                lineNumber: 1386,
+                                lineNumber: 1394,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/messages/page.js",
-                            lineNumber: 1385,
+                            lineNumber: 1393,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/messages/page.js",
-                    lineNumber: 1001,
+                    lineNumber: 1009,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/messages/page.js",
-                lineNumber: 1000,
+                lineNumber: 1008,
                 columnNumber: 7
             }, this),
             showNicknameModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1961,7 +1981,7 @@ function MessagesPage() {
                             children: "เปลี่ยนชื่อเล่น"
                         }, void 0, false, {
                             fileName: "[project]/app/messages/page.js",
-                            lineNumber: 1403,
+                            lineNumber: 1411,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1972,7 +1992,7 @@ function MessagesPage() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/messages/page.js",
-                            lineNumber: 1404,
+                            lineNumber: 1412,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1984,7 +2004,7 @@ function MessagesPage() {
                             autoFocus: true
                         }, void 0, false, {
                             fileName: "[project]/app/messages/page.js",
-                            lineNumber: 1405,
+                            lineNumber: 1413,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1996,7 +2016,7 @@ function MessagesPage() {
                                     children: "ยกเลิก"
                                 }, void 0, false, {
                                     fileName: "[project]/app/messages/page.js",
-                                    lineNumber: 1414,
+                                    lineNumber: 1422,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2005,7 +2025,7 @@ function MessagesPage() {
                                     children: "คืนค่าชื่อเดิม"
                                 }, void 0, false, {
                                     fileName: "[project]/app/messages/page.js",
-                                    lineNumber: 1415,
+                                    lineNumber: 1423,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2014,24 +2034,24 @@ function MessagesPage() {
                                     children: "ตกลง"
                                 }, void 0, false, {
                                     fileName: "[project]/app/messages/page.js",
-                                    lineNumber: 1416,
+                                    lineNumber: 1424,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/messages/page.js",
-                            lineNumber: 1413,
+                            lineNumber: 1421,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/messages/page.js",
-                    lineNumber: 1402,
+                    lineNumber: 1410,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/messages/page.js",
-                lineNumber: 1401,
+                lineNumber: 1409,
                 columnNumber: 9
             }, this),
             showConfirmModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2045,12 +2065,12 @@ function MessagesPage() {
                                 className: "bi bi-exclamation-triangle-fill text-warning"
                             }, void 0, false, {
                                 fileName: "[project]/app/messages/page.js",
-                                lineNumber: 1425,
+                                lineNumber: 1433,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/messages/page.js",
-                            lineNumber: 1424,
+                            lineNumber: 1432,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2058,7 +2078,7 @@ function MessagesPage() {
                             children: confirmConfig.title
                         }, void 0, false, {
                             fileName: "[project]/app/messages/page.js",
-                            lineNumber: 1427,
+                            lineNumber: 1435,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2066,7 +2086,7 @@ function MessagesPage() {
                             children: confirmConfig.message
                         }, void 0, false, {
                             fileName: "[project]/app/messages/page.js",
-                            lineNumber: 1428,
+                            lineNumber: 1436,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2080,14 +2100,14 @@ function MessagesPage() {
                                             className: "bi bi-x-lg"
                                         }, void 0, false, {
                                             fileName: "[project]/app/messages/page.js",
-                                            lineNumber: 1434,
+                                            lineNumber: 1442,
                                             columnNumber: 17
                                         }, this),
                                         " ไม่ส่ง"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/messages/page.js",
-                                    lineNumber: 1430,
+                                    lineNumber: 1438,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2098,31 +2118,31 @@ function MessagesPage() {
                                             className: "bi bi-send-fill"
                                         }, void 0, false, {
                                             fileName: "[project]/app/messages/page.js",
-                                            lineNumber: 1437,
+                                            lineNumber: 1445,
                                             columnNumber: 17
                                         }, this),
                                         " ส่ง"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/messages/page.js",
-                                    lineNumber: 1436,
+                                    lineNumber: 1444,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/messages/page.js",
-                            lineNumber: 1429,
+                            lineNumber: 1437,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/messages/page.js",
-                    lineNumber: 1423,
+                    lineNumber: 1431,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/messages/page.js",
-                lineNumber: 1422,
+                lineNumber: 1430,
                 columnNumber: 9
             }, this),
             showImageModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2136,12 +2156,12 @@ function MessagesPage() {
                             className: "bi bi-x-lg"
                         }, void 0, false, {
                             fileName: "[project]/app/messages/page.js",
-                            lineNumber: 1446,
+                            lineNumber: 1454,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/messages/page.js",
-                        lineNumber: 1445,
+                        lineNumber: 1453,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2154,7 +2174,7 @@ function MessagesPage() {
                                 className: "image-modal-img"
                             }, void 0, false, {
                                 fileName: "[project]/app/messages/page.js",
-                                lineNumber: 1449,
+                                lineNumber: 1457,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2168,32 +2188,32 @@ function MessagesPage() {
                                         className: "bi bi-download"
                                     }, void 0, false, {
                                         fileName: "[project]/app/messages/page.js",
-                                        lineNumber: 1457,
+                                        lineNumber: 1465,
                                         columnNumber: 15
                                     }, this),
                                     " ดาวน์โหลดรูปภาพ"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/messages/page.js",
-                                lineNumber: 1450,
+                                lineNumber: 1458,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/messages/page.js",
-                        lineNumber: 1448,
+                        lineNumber: 1456,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/messages/page.js",
-                lineNumber: 1444,
+                lineNumber: 1452,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/messages/page.js",
-        lineNumber: 998,
+        lineNumber: 1006,
         columnNumber: 5
     }, this);
 }

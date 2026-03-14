@@ -42,6 +42,14 @@ const resolvePath = (raw) => {
 }
 
 export default function MessagesPage() {
+  return (
+    <React.Suspense fallback={<div>Loading...</div>}>
+      <MessagesPageContent />
+    </React.Suspense>
+  )
+}
+
+function MessagesPageContent() {
   const searchParams = useSearchParams()
   const [conversations, setConversations] = useState([])
   const [activeId, setActiveId] = useState('')
